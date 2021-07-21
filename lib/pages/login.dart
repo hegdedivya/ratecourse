@@ -73,6 +73,9 @@ class _LoginState extends State<Login> {
                         setState(() {});
                       },
                     ),
+                    SizedBox(
+                      height: 20,
+                    ),
                     TextFormField(
                       obscureText: true,
                       decoration: InputDecoration(
