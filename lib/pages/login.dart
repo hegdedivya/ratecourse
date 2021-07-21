@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:ratecourse/utils/routes.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
+  @override
+  _LoginState createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  String name = "";
+  bool changeButton = false;
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -19,7 +26,7 @@ class Login extends StatelessWidget {
               height: 30,
             ),
             Text(
-              "Welcome!",
+              "Welcome $name",
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.w900,
@@ -35,9 +42,13 @@ class Login extends StatelessWidget {
                 children: [
                   TextFormField(
                     decoration: InputDecoration(
-                      hintText: "Enter email",
-                      labelText: "Email",
+                      hintText: "Enter username",
+                      labelText: "Username",
                     ),
+                    onChanged: (value) {
+                      name = value;
+                      setState(() {});
+                    },
                   ),
                   TextFormField(
                     obscureText: true,
@@ -49,15 +60,48 @@ class Login extends StatelessWidget {
                   SizedBox(
                     height: 40,
                   ),
-                  ElevatedButton(
-                    child: Text("Login"),
-                    style: TextButton.styleFrom(
-                      minimumSize: Size(80, 50),
-                    ),
-                    onPressed: () {
+                  InkWell(
+                    onTap: () async {
+                      setState(() {
+                        changeButton = true;
+                      });
+                      await Future.delayed(Duration(milliseconds: 100));
                       Navigator.pushNamed(context, MyRoutes.homeRoute);
                     },
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 100),
+                      height: 50,
+                      width: changeButton ? 50 : 100,
+                      alignment: Alignment.center,
+                      child: changeButton
+                          ? Icon(
+                              Icons.done,
+                              color: Colors.black,
+                            )
+                          : Text(
+                              "Login",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                      decoration: BoxDecoration(
+                        color: Colors.greenAccent.shade200,
+                        borderRadius:
+                            BorderRadius.circular(changeButton ? 50 : 12),
+                      ),
+                    ),
                   ),
+                  // ElevatedButton(
+                  //   child: Text("Login"),
+                  //   style: TextButton.styleFrom(
+                  //     minimumSize: Size(80, 50),
+                  //   ),
+                  //   onPressed: () {
+                  //     Navigator.pushNamed(context, MyRoutes.homeRoute);
+                  //   },
+                  // ),
                 ],
               ),
             ),
