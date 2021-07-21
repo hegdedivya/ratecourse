@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ratecourse/pages/home.dart';
 import 'package:ratecourse/pages/login.dart';
+import 'package:ratecourse/utils/routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,8 +25,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/login",
       routes: {
         "/": (context) => Login(),
-        "/home": (context) => Home(),
-        "/login": (context) => Login(),
+        MyRoutes.homeRoute: (context) => Home(),
+        MyRoutes.loginRoute: (context) => Login(),
       },
     );
   }
