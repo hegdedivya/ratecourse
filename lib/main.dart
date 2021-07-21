@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:ratecourse/pages/home.dart';
 import 'package:ratecourse/pages/login.dart';
 import 'package:ratecourse/utils/routes.dart';

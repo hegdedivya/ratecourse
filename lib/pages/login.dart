@@ -115,12 +115,23 @@ class _LoginState extends State<Login> {
                                 ),
                               ),
                         decoration: BoxDecoration(
-                          color: Colors.greenAccent.shade200,
+                          color: Colors.deepOrange.shade200,
                           borderRadius:
                               BorderRadius.circular(changeButton ? 50 : 12),
                         ),
                       ),
                     ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "Don't have an account? Sign Up!",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.blueGrey,
+                      ),
+                    )
                   ],
                 ),
               ),

@@ -10,7 +10,7 @@ class MyDrawer extends StatelessWidget {
         "https://cdn.pixabay.com/photo/2021/01/04/10/41/icon-5887126_1280.png";
     return Drawer(
       child: Container(
-        color: Colors.green,
+        color: Colors.deepOrange.shade50,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -28,39 +28,39 @@ class MyDrawer extends StatelessWidget {
             ListTile(
               leading: Icon(
                 CupertinoIcons.home,
-                color: Colors.white,
+                color: Colors.black87,
               ),
               title: Text(
                 "Home",
                 textScaleFactor: 1.2,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black87,
                 ),
               ),
             ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.pencil_outline,
-                color: Colors.white,
+                color: Colors.black87,
               ),
               title: Text(
                 "My Reviews",
                 textScaleFactor: 1.2,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black87,
                 ),
               ),
             ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.settings,
-                color: Colors.white,
+                color: Colors.black87,
               ),
               title: Text(
                 "Settings",
                 textScaleFactor: 1.2,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black87,
                 ),
               ),
             ),
