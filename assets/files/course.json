@@ -1,0 +1,40 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "coursename": "Artificial Intelligence",
+            "rating": 2,
+            "desc": "Study how to realize the intelligent human behaviors on a computer, build and train models"
+        },
+        {
+            "id": 2,
+            "coursename": "Big Data Analytics",
+            "rating": 3,
+            "desc": "Application of advanced data analysis techniques to datasets arriving in realtime"
+        },
+        {
+            "id": 3,
+            "coursename": "Cloud Computing",
+            "rating": 3,
+            "desc": "Oversee a company's cloud adoption plans, cloud application design, and cloud architecture"
+        },
+        {
+            "id": 4,
+            "coursename": "Cryptography and Network Security",
+            "rating": 4,
+            "desc": "Develop a basic understanding of algorithms used to protect users online"
+        },
+        {
+            "id": 5,
+            "coursename": "Internet of Things",
+            "rating": 3.5,
+            "desc": "Complete Guide to Build IOT Things from Scratch to Market"
+        },
+        {
+            "id": 6,
+            "coursename": "Mobile App Development",
+            "rating": 3.5,
+            "desc": "Everything you need to build enterprise apps incredibly fast"
+        }
+    ]
+}

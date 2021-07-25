@@ -35,13 +35,13 @@ class _HomeState extends State<Home> {
               ),
             ),
             CollegePicker(),
-            CoursePicker(),
+            //CoursePicker(),
             SizedBox(
               height: 20,
             ),
             InkWell(
               onTap: () {
-                Navigator.pushNamed(context, MyRoutes.loginRoute);
+                Navigator.pushNamed(context, MyRoutes.courseRoute);
               },
               child: Container(
                 height: 50,
@@ -191,6 +191,7 @@ class CollegePicker extends StatelessWidget {
                 onSuggestionSelected: (String val) {
                   this._textEditingController.text = val;
                   print(val);
+                  //Navigator.of(context).pushNamed(MyRoutes.courseRoute);
                 },
                 getImmediateSuggestions: false,
                 hideSuggestionsOnKeyboardHide: false,

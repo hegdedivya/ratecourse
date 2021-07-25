@@ -36,14 +36,14 @@ class _LoginState extends State<Login> {
           child: Column(
             children: [
               Image.asset(
-                "assets/images/bg.png",
+                "assets/images/search.png",
                 fit: BoxFit.cover,
               ),
               SizedBox(
                 height: 30,
               ),
               Text(
-                "Welcome $name",
+                "Welcome ${name}",
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w900,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ratecourse/courselists/coursedata.dart';
 import 'package:ratecourse/pages/home.dart';
 import 'package:ratecourse/pages/login.dart';
 import 'package:ratecourse/utils/routes.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => Login(),
         MyRoutes.homeRoute: (context) => Home(),
         MyRoutes.loginRoute: (context) => Login(),
+        MyRoutes.courseRoute: (context) => CourseData(),
       },
     );
   }

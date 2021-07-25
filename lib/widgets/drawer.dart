@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ratecourse/utils/routes.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);
@@ -26,6 +27,9 @@ class MyDrawer extends StatelessWidget {
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.of(context).pushNamed(MyRoutes.homeRoute);
+              },
               leading: Icon(
                 CupertinoIcons.home,
                 color: Colors.black87,
@@ -39,6 +43,9 @@ class MyDrawer extends StatelessWidget {
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.of(context).pushNamed(MyRoutes.homeRoute);
+              },
               leading: Icon(
                 CupertinoIcons.pencil_outline,
                 color: Colors.black87,
@@ -52,12 +59,15 @@ class MyDrawer extends StatelessWidget {
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.of(context).pushNamed(MyRoutes.loginRoute);
+              },
               leading: Icon(
-                CupertinoIcons.settings,
+                CupertinoIcons.arrow_down_right_square_fill,
                 color: Colors.black87,
               ),
               title: Text(
-                "Settings",
+                "Logout",
                 textScaleFactor: 1.2,
                 style: TextStyle(
                   color: Colors.black87,
