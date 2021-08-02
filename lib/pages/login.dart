@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ratecourse/utils/registerheader.dart';
 import 'package:ratecourse/utils/routes.dart';
 
 class Login extends StatefulWidget {
@@ -37,13 +38,12 @@ class _LoginState extends State<Login> {
             children: [
               Image.asset(
                 "assets/images/search.png",
-                fit: BoxFit.cover,
               ),
               SizedBox(
                 height: 30,
               ),
               Text(
-                "Welcome ${name}",
+                "Welcome!",
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w900,
@@ -59,12 +59,12 @@ class _LoginState extends State<Login> {
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                        hintText: "Enter username",
-                        labelText: "Username",
+                        hintText: "Enter email",
+                        labelText: "Email",
                       ),
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return "Username is required";
+                          return "Email is required";
                         }
                         return null;
                       },
@@ -124,12 +124,17 @@ class _LoginState extends State<Login> {
                     SizedBox(
                       height: 20,
                     ),
-                    Text(
-                      "Don't have an account? Sign Up!",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.blueGrey,
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).pushNamed(MyRoutes.regisRoute);
+                      },
+                      child: Text(
+                        "Don't have an account? Sign Up!",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.blueGrey,
+                        ),
                       ),
                     )
                   ],

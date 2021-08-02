@@ -1,5 +1,5 @@
 class CourseModel {
-  static final courselist = [
+  static List<CourseName> courselist = [
     CourseName(
       id: 1,
       coursename: "Artificial Intelligence",
@@ -21,4 +21,17 @@ class CourseName {
     required this.rating,
     required this.desc,
   });
+  factory CourseName.fromMap(Map<String, dynamic> map) => CourseName(
+        id: map["id"],
+        coursename: map["coursename"],
+        rating: map["rating"],
+        desc: map["desc"],
+      );
+
+  toMap() => {
+        "id": id,
+        "coursename": coursename,
+        "rating": rating,
+        "desc": desc,
+      };
 }

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ratecourse/courselists/coursedata.dart';
 import 'package:ratecourse/pages/home.dart';
 import 'package:ratecourse/pages/login.dart';
+import 'package:ratecourse/pages/register.dart';
+import 'package:ratecourse/pages/registersample.dart';
+import 'package:ratecourse/pages/submitreview.dart';
 import 'package:ratecourse/utils/routes.dart';
 import 'package:ratecourse/widgets/themes.dart';
 
@@ -25,6 +28,8 @@ class MyApp extends StatelessWidget {
         MyRoutes.homeRoute: (context) => Home(),
         MyRoutes.loginRoute: (context) => Login(),
         MyRoutes.courseRoute: (context) => CourseData(),
+        MyRoutes.regisRoute: (context) => RegisSample(),
+        MyRoutes.reviewRoute: (context) => SubmitReview(),
       },
     );
   }

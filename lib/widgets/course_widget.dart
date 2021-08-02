@@ -10,51 +10,20 @@ class CourseWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      SizedBox(
-        height: 30,
+    return ListTile(
+      contentPadding: EdgeInsets.all(8),
+      leading: Image.network(
+          "https://cdn.pixabay.com/photo/2021/01/04/10/41/icon-5887126_1280.png"),
+      title: Text(
+        courselist.coursename,
       ),
-      Text(
-        ("NMAMIT"),
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
-        ),
+      subtitle: Text(
+        courselist.desc,
       ),
-      SizedBox(
-        height: 30,
+      trailing: Icon(
+        Icons.code,
+        color: Colors.deepOrange.shade300,
       ),
-      Text(
-        "Courses Offered",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-          color: Colors.blueGrey,
-        ),
-      ),
-      SizedBox(
-        height: 30,
-      ),
-      ListTile(
-        leading: Image.network(
-            "https://cdn.pixabay.com/photo/2021/01/04/10/41/icon-5887126_1280.png"),
-        title: Text(
-          courselist.coursename,
-        ),
-        subtitle: Text(
-          courselist.desc,
-        ),
-        trailing: Icon(
-          Icons.code,
-          color: Colors.deepOrange.shade300,
-        ),
-        selectedTileColor: Colors.deepOrange.shade100,
-        onTap: () {
-          print("${courselist.coursename}");
-        },
-      ),
-    ]);
+    );
   }
 }

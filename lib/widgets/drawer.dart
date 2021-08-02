@@ -63,7 +63,7 @@ class MyDrawer extends StatelessWidget {
                 Navigator.of(context).pushNamed(MyRoutes.loginRoute);
               },
               leading: Icon(
-                CupertinoIcons.arrow_down_right_square_fill,
+                CupertinoIcons.arrow_down_left_square,
                 color: Colors.black87,
               ),
               title: Text(
